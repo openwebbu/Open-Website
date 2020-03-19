@@ -24,7 +24,6 @@
     "start": "npm run build && npm run serve"
   },
   "devDependencies": {
-    "hugo-bin": "^0.54.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-purgecss": "^2.1.3",
     "sass": "^1.26.2",
