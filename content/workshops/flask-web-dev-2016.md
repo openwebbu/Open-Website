@@ -15,7 +15,7 @@ Download the started code from our [Github repo](https://github.com/lawrluor/fla
 
 A virtual environment is an isolated Python environment that contains your application's libraries and dependencies. We will create and install a virtual environment, that we will name `flask`. The `activate` line activates your virtual environment.
 
-On **OS X, Linux, Cygwin**:
+On **{{< fa-icon fab fa-apple >}} OS X, {{< fa-icon fab fa-linux >}} Linux, Cygwin**:
 
 {{< highlight bash >}}
 # Navigate to your project directory (the starter code folder you downloaded)
@@ -41,7 +41,7 @@ $ flask/bin/pip install flask-whooshalchemy
 $ flask/bin/pip install flask-wtf
 {{< / highlight >}}
 
-On **Windows**:
+On **{{< fa-icon fab fa-windows >}} Windows**:
 
 {{< highlight bash >}}
 # Navigate to your project directory (the starter code folder you downloaded)
@@ -110,14 +110,14 @@ The script simply imports the `app` variable from our app package and invokes it
 
 Now it's time to run the script.
 
-On **OS X, Linux and Cygwin**:
+On **{{< fa-icon fab fa-apple >}} OS X, {{< fa-icon fab fa-linux >}} Linux, Cygwin**:
 
 {{< highlight bash >}}
 $ chmod a+x run.py # change file to be executable
 $ python3 run.py
 {{< / highlight >}}
 
-On **Windows**:
+On **{{< fa-icon fab fa-windows >}} Windows**:
 
 {{< highlight bash >}}
 $ flask/Scripts/python run.py

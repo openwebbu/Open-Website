@@ -51,7 +51,7 @@ $ react-native init BU_quiz // Initialize Project
 $ cd BU_quiz // change directory
 {{< / highlight >}}
 
-Now, move the three .js files from AppCode into your BU_quiz directory (you can also use your finder/explorer)
+Now, move the three .js files from AppCode into your `BU_quiz` directory (you can also use your finder/explorer)
 
 {{< highlight bash >}}
 $ mv ../AppCode/QuestionPage.js QuestionPage.js
@@ -68,14 +68,14 @@ $ react-native run-android // for simulating android
 
 Steps for running your app directly on your device (view [documentation](https://facebook.github.io/react-native/docs/running-on-device.html) for more details):
 
-**iOS**
+**iOS {{< fa-icon fab fa-apple >}}**
 
 * Connect your device to your Mac via USB, then open Xcode.
 * Navigate into ios folder of your project and open the file ending .xcodeproj inside it.
 * In the project navigator, choose your device from the Product > Destination toolbar menu. Xcode will then register your device for development. 
 * Finally, select your phone as the build target and press Build and run.
 
-**Android**
+**Android {{< fa-icon fab fa-android >}}**
 
 * View [Android Documentation](https://facebook.github.io/react-native/docs/running-on-device.html)
 

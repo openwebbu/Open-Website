@@ -60,7 +60,11 @@
 <p>Download the started code from our <a href="https://github.com/lawrluor/flask_webdev/">Github repo</a>.</p>
 <h3 id="create-your-virtual-environment">Create Your virtual environment</h3>
 <p>A virtual environment is an isolated Python environment that contains your application&rsquo;s libraries and dependencies. We will create and install a virtual environment, that we will name <code>flask</code>. The <code>activate</code> line activates your virtual environment.</p>
-<p>On <strong>OS X, Linux, Cygwin</strong>:</p>
+<p>On <strong>
+  <i class="fab fa-apple "></i>
+ OS X, 
+  <i class="fab fa-linux "></i>
+ Linux, Cygwin</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
 
 <span style="color:#75715e"># Using Python 3</span>
@@ -82,7 +86,9 @@ $ flask/bin/pip install flask-sqlalchemy
 $ flask/bin/pip install sqlalchemy-migrate
 $ flask/bin/pip install flask-whooshalchemy
 $ flask/bin/pip install flask-wtf</code></pre></div>
-<p>On <strong>Windows</strong>:</p>
+<p>On <strong>
+  <i class="fab fa-windows "></i>
+ Windows</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
 <span style="color:#75715e"># $ dir will list all files &amp; folders in your current directory, $ cd [folder] will change your current directory</span>
 $ python get-pip.py <span style="color:#75715e"># Scripts\python # Python\get-pip.py</span>
@@ -128,10 +134,16 @@ app_obj <span style="color:#f92672">=</span> Flask(__name__) <span style="color:
 app_obj<span style="color:#f92672">.</span>run(debug<span style="color:#f92672">=</span>True)</code></pre></div>
 <p>The script simply imports the <code>app</code> variable from our app package and invokes its <code>run</code> method to start the server. Remember that the <code>app</code> variable holds the <code>Flask</code> instance that we created it above. The first line indicates that the version of Python we are using is from the virtual environment we created, <code>flask</code>.</p>
 <p>Now it&rsquo;s time to run the script.</p>
-<p>On <strong>OS X, Linux and Cygwin</strong>:</p>
+<p>On <strong>
+  <i class="fab fa-apple "></i>
+ OS X, 
+  <i class="fab fa-linux "></i>
+ Linux, Cygwin</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod a+x run.py <span style="color:#75715e"># change file to be executable</span>
 $ python3 run.py</code></pre></div>
-<p>On <strong>Windows</strong>:</p>
+<p>On <strong>
+  <i class="fab fa-windows "></i>
+ Windows</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flask/Scripts/python run.py</code></pre></div>
 <p>You should get some confirmation that your server is running. Now, visit this address in your browser: <a href="http://localhost:5000/">http://localhost:5000/</a> or the address that appears. To kill the server, hit ctrl-c.</p>
 <h2 id="lets-get-cooking">Let&rsquo;s Get Cooking</h2>
