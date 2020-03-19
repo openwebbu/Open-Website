@@ -1,4 +1,6 @@
-# openwebbu.github.io
+# Open Website
+
+This is where all of the content for the open web website is.
 
 ## Editing this site locally
 
