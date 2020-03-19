@@ -18,7 +18,7 @@
   "license": "MIT",
   "scripts": {
     "parcel": "parcel build assets/app.ts assets/styles.scss --out-dir static",
-    "prebuild": "rm -rf docs",
+    "prebuild": "find ./docs ! -name 'CNAME' -type f -exec rm -rf {} +",
     "build": "hugo -d docs && npm run parcel",
     "serve": "hugo serve -d docs",
     "start": "npm run build && npm run serve"
