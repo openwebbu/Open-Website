@@ -8,7 +8,7 @@ All of the code for the Open Web website lives here now. Check it out, and feel 
 
 ## Repo Overview
 
-We use [Hugo](https://gohugo.io/getting-started/installing/) to build our site, and [npm](https://www.npmjs.com/get-npm) to manage all of our dependencies. You will need to install both of those in orderr to build and run the website on your own computer. 
+We use [Hugo](https://gohugo.io/getting-started/installing/) to build our site, and [npm](https://www.npmjs.com/get-npm) to manage all of our dependencies. You will need to install both of those in order to build and run the website on your own computer. 
 
 Quick outline of the directory structure: 
 
