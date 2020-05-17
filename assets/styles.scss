@@ -30,15 +30,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-.nav__logo {
-    font-family: $logo-font;
-    font-size: 24px !important;
-}
-
-.nav__logo__thick {
-    font-weight: 900;
-}
-
 h1 {
     font-size: 2rem;
 }
@@ -115,40 +106,48 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    &__link {
+        float: right;
+        display: block;
+        text-align: center;
+        padding: 0 16px;
+        text-decoration: none;
+        font-size: 20px;
+
+        :hover {
+            color: aqua;
+        }
+    
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        &:first-child  {
+            float:left;
+        }
+
+        &.icon {
+            display: none;
+            touch-action: manipulation;
+        
+            :hover {
+                color: $open-web-brand;
+            }
+        }
+    }
+
+    &__logo {
+        font-family: $logo-font;
+        font-size: 24px !important;
+
+        &--thick {
+            font-weight: 900;
+        }
+    }
 } 
   
-.nav__link {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 0 16px;
-    text-decoration: none;
-    font-size: 20px;
-
-    :hover {
-        color: aqua;
-    }
-
-    .active {
-        background-color: #4CAF50;
-        color: white;
-    }
-
-}
-
-.nav__link:first-child  {
-    float:left;
-}
-
-.nav__link.icon {
-    display: none;
-    touch-action: manipulation;
-
-    :hover {
-        color: $open-web-brand;
-    }
-}
-
 main {
     flex-grow: 1;
     margin: 0 10px;
@@ -171,7 +170,6 @@ footer {
     text-align: center;
     font-size: 30px;
     padding: 10px 0;
-    //color:rgba(255,255,255,0.5);
     background-color: white;
     color: $open-web-brand;
     @include BoxShadow(3);
@@ -217,10 +215,10 @@ svg#logo-white {
     font-size: 30px;
     color: #53b8e7;
     @include BoxShadow(3);
-}
 
-.apply-button:hover {
-    @include BoxShadow(9);
+    &:hover {
+        @include BoxShadow(9);
+    }
 }
 
 img {
@@ -243,22 +241,20 @@ pre {
  @media screen and (max-width: 650px) {
      // Hide the links before clicked
 
-    
-
-     .nav__link {
+     .topnav__link {
         float: none;
     }
 
-    .nav__link:not(:first-child)  {
+    .topnav__link:not(:first-child)  {
         display: none;
         padding: 8px 16px 0;
     }
 
-    .nav__link:first-child  {
+    .topnav__link:first-child  {
         float:none;
     }
 
-    .nav__link.icon {
+    .topnav__link.icon {
         position: absolute;
         right: 4px;
         top: 4px;
@@ -268,12 +264,12 @@ pre {
     .menuShown {
         position: relative;
 
-        .nav__link {
+        .topnav__link {
             display: block;
             text-align: center;
         }
 
-        .nav__link.icon {
+        .topnav__link.icon {
             position: absolute;
             right: -8px;
             top: -8px;
