@@ -1,15 +1,15 @@
 // External dependencies
 
-@import '../node_modules/normalize-scss/sass/normalize';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss'; // For footer logos
-@import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss'; // For hamburger bars
-@import url('https://fonts.googleapis.com/css?family=Muli:400,900&display=swap'); // Header font
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,500&display=swap'); // Body font
+@import "../node_modules/normalize-scss/sass/normalize";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss"; // For footer logos
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss"; // For hamburger bars
+@import url("https://fonts.googleapis.com/css?family=Muli:400,900&display=swap"); // Header font
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,500&display=swap"); // Body font
 
 // Our imports
 
-@import 'elevation.scss';
+@import "elevation.scss";
 
 // Variables
 
@@ -48,7 +48,7 @@ code {
     font-family: $code-font;
 }
 
-:not(pre) > code{
+:not(pre) > code {
     background-color: #d2edf9;
 }
 
@@ -68,7 +68,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
-    height:100%;
+    height: 100%;
     display: flex;
     flex-flow: column;
     font-size: 16px;
@@ -85,7 +85,7 @@ header {
     font-size: 30px;
 
     @include BoxShadow(3);
-    z-index:1;
+    z-index: 1;
 
     a {
         text-decoration: none;
@@ -99,7 +99,7 @@ header {
 }
 
 nav {
-    width:100%;
+    width: 100%;
 }
 
 .topnav {
@@ -108,7 +108,7 @@ nav {
     padding: 0;
 
     &__link {
-        float: right;
+        float: none;
         display: block;
         text-align: center;
         padding: 0 16px;
@@ -118,20 +118,28 @@ nav {
         :hover {
             color: aqua;
         }
-    
+
         .active {
-            background-color: #4CAF50;
+            background-color: #4caf50;
             color: white;
         }
 
-        &:first-child  {
-            float:left;
+        &:first-child {
+            float: none;
+        }
+
+        &:not(:first-child) {
+            display: none;
+            padding: 8px 16px 0;
         }
 
         &.icon {
-            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            display: block;
             touch-action: manipulation;
-        
+
             :hover {
                 color: $open-web-brand;
             }
@@ -146,8 +154,23 @@ nav {
             font-weight: 900;
         }
     }
-} 
-  
+}
+
+.menuShown {
+    position: relative;
+
+    .topnav__link {
+        display: block;
+        text-align: center;
+
+        &.icon {
+            position: absolute;
+            right: -8px;
+            top: -8px;
+        }
+    }
+}
+
 main {
     flex-grow: 1;
     margin: 0 10px;
@@ -166,7 +189,7 @@ article {
 }
 
 footer {
-    width:100%;
+    width: 100%;
     text-align: center;
     font-size: 30px;
     padding: 10px 0;
@@ -199,7 +222,7 @@ footer {
 
 svg#logo-white {
     max-width: 65%;
-    padding:16px;
+    padding: 16px;
     margin: 0 auto;
 }
 
@@ -232,51 +255,39 @@ pre {
     font-size: 14px;
 }
 
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
 
 // Change to hamburger menu when the menu would otherwise be too big.
+@media screen and (min-width: 650px) {
+    // Show all links instead of collapsing to menu.
 
- @media screen and (max-width: 650px) {
-     // Hide the links before clicked
+    .topnav__link {
+        float: right;
 
-     .topnav__link {
-        float: none;
-    }
-
-    .topnav__link:not(:first-child)  {
-        display: none;
-        padding: 8px 16px 0;
-    }
-
-    .topnav__link:first-child  {
-        float:none;
-    }
-
-    .topnav__link.icon {
-        position: absolute;
-        right: 4px;
-        top: 4px;
-        display: block;
-    }
-
-    .menuShown {
-        position: relative;
-
-        .topnav__link {
+        &:not(:first-child) {
             display: block;
-            text-align: center;
+            padding: 0 16px;
         }
 
-        .topnav__link.icon {
-            position: absolute;
-            right: -8px;
-            top: -8px;
+        &:first-child {
+            float: left;
+        }
+
+        &.icon {
+            /*position: static;*/
+            display: none;
         }
     }
-  }
-
+    
+}
 
 // Good text width is 800, so this breakpoint was set with that in mind.
 @media (min-width: 840px) {
